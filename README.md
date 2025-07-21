@@ -1,1 +1,1 @@
-# metric-dissimilarity
+# Metric dissimilarity
