@@ -630,6 +630,8 @@ def _get_backbone(backbone, pretrained=True):
     cls = network.classifier
     if backbone.startswith("efficientnet"):
       feature_size = cls[1].in_features
+    elif backbone.startswith("mobilenet"):
+      feature_size = cls[0].in_features
     elif backbone.startswith("convnext"):
       # Keep LayerNorm2d + Flatten
       extra_layers.extend([cls[0], cls[1]])
